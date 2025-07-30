@@ -1,13 +1,220 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="./js/index.js" defer></script>
+</head>
+<body>
+  <div class="wrapper" id="resume-content">
+    <section class="avatar">
+      <img class="avatar__img" src="/public/avatar.png" width="124" height="124" alt="Аватар">
+    </section>
+    <section class="section-container introduction"> 
+      <p class="introduction__greetings">Hello 👋🏻 I’m</p>
+      <div>
+        <h2 class="introduction__name">
+          Karthik SR
+        </h2>
+        <p class="introduction__position">
+          UX/UI Designer
+        </p>
+      </div>
+    </section>
+    <section class="section-container languages">
+      <h2 class="block-title languages__title">
+        Languages
+      </h2>
+      <div class="languages__container">
+        <div class="languages__name-container">
+          <p class="languages__name">English</p>
+          <p class="languages__name">Malayalam</p>
+          <p class="languages__name">Hindi</p>
+        </div>
+        <div class="languages__progress-container">
+          <span class="languages__progress languages__progress--en"></span>
+          <span class="languages__progress languages__progress--ma"></span>
+          <span class="languages__progress languages__progress--hi"></span>
+        </div>
+      </div>
+    </section>
+    <section class="section-container experience">
+      <h2 class="block-title">
+        Experience
+      </h2>
+      <div class="experience__card-container">
+        <div class="card experience__card experience__card--green">
+          <p class="experience__period">Jun. 2023 - Present<span class="experience__recent">most recent</span></p> 
+          <div class="experience__description-container">
+            <div class="experience__position-container">
+              <p class="experience__position">Marketing Manager</p>
+              <p class="experience__tags experience__tags--green">Pankayam | Full-time</p>
+            </div>
+            <ul class="experience__description">
+              <li>
+                Strategy development and planning of campaigns that promote the business and generate genuine traffic
+              </li>
+              <li>
+                SEO Content Creation for Blogs, Website, Social media
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="experience__period">2017 - Present</p> 
+          <div class="experience__description-container">
+            <div>
+              <p class="experience__position">Graphic / Web designer</p>
+              <p class="experience__tags">Freelance</p>
+            </div>
+            <ul class="experience__description">
+              <li>
+                Development of internal projects from scratch, product design of brands 
+              </li>
+              <li>
+                Landing page, webapps and hybrid apps 
+              </li>
+              <li>
+                Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.            
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="experience__period">Sep. 2021 - Jun. 2023</p> 
+          <div class="experience__description-container">
+            <div>
+              <p class="experience__position">Legal Assistant</p>
+              <p class="experience__tags">Law Firm | Intern</p>
+            </div>
+            <ul class="experience__description">
+              <li>
+                Provide administrative support to lawyer and enhance office effectiveness
+              </li>
+              <li>
+                Handle communication with clients, witnesses etc.
+              </li>
+              <li>
+                repare case briefs and summarize depositions, interrogatories and testimony
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-container tools">
+      <h2 class="block-title tools__title">Tools</h2>
+      <div class="tools__container">
+        <div class="tools__card">
+          <span class="tools__card-title">design</span>
+          <img class="tools__card-icon" src="/public/logoFigma.svg" alt="Figma">
+          <img class="tools__icon" src="/public/logoPhotoshop.svg" alt="Photoshop">
+          <img class="tools__icon" src="/public/logoIllustrator.svg" alt="illustrator">
+          <img class="tools__icon" src="/public/logoPremiere.svg" alt="Premiere">
+          <img class="tools__icon" src="/public/logoNotion.svg" alt="Notion">
+          <img class="tools__icon" src="/public/logoMeet.svg" alt="GoogleMeet">
+        </div>
+        <div class="tools__card">
+          <span class="tools__card-title">no-code</span>
+          <img class="tools__card-icon" src="/public/logoZapier.svg" alt="Zapier">
+          <img class="tools__icon" src="/public/logoWebflow.svg" alt="Webflow">
+          <img class="tools__icon" src="/public/logoFramer.svg" alt="Framer">
+          <img class="tools__icon" src="/public/logoWordpress.svg" alt="Wordpress">
+        </div>
+        <div class="tools__card">
+          <span class="tools__card-title">artoficial intelligence</span>
+          <img class="tools__card-icon" src="/public/logoChatGPT.svg" alt="ChatGPT">
+          <img class="tools__icon" src="/public/logoCopilot.svg" alt="Copilot">
+          <img class="tools__icon" src="/public/logoMidjourney.svg" alt="Midjourney">
+        </div>
+      </div>
+    </section>
+    <section class="section-container education">
+      <h2 class="block-title education__title">
+        Education
+      </h2>
+      <div class="education__card-container">  
+        <div class="card education__card education__card-like">
+          <div class="education__card-date">
+            2023
+            <img src="/public/like.svg" alt="лайк">
+          </div>
+          <div>
+            <h4 class="education__card-title">UI/UX</h4>
+            <div class="education__hashtag-container">
+              <span class="education__card-hashtag education__card-hashtag-like">#UX</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#UI</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#research</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#DesignSystem</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#Ui</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#wireframing</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#figma</span>
+              <span class="education__card-hashtag education__card-hashtag-like">#Ux</span>
+            </div>
+          </div>
+          <p class="education__card-place">Coursera</p>
+        </div>
+        <div class="card education__card">
+          <div class="education__card-date">2017 - 2022</div>
+          <div>
+            <h4 class="education__card-title">Law</h4>
+            <div class="education__hashtag-container">
+              <span class="education__card-hashtag">#law</span>
+              <span class="education__card-hashtag">#legalStudies</span>
+              <span class="education__card-hashtag">#contracts</span>
+              <span class="education__card-hashtag">#internationalLaws</span>
+            </div>
+          </div>
+          <p class="education__card-place">University of Kerala</p>
+        </div>
+        <div class="card education__card">
+          <div class="education__card-date"> 2017</div>
+          <div>
+            <h4 class="education__card-title">Graphic design</h4>
+            <div class="education__hashtag-container">
+              <span class="education__card-hashtag">#branding</span>
+              <span class="education__card-hashtag">#web</span>
+              <span class="education__card-hashtag">#illustration</span>
+              <span class="education__card-hashtag">#adobe</span>
+            </div>
+          </div>
+          <p class="education__card-place">Coursera</p>
+        </div>
+      </div>
+    </section>
+    <section class="section-container interests">
+      <h2 class="block-title interests__title">
+        Interests
+      </h2>
+      <ul class="interests__list">
+        <li class="interests__item">branding</li>
+        <li class="interests__item">design</li>
+        <li class="interests__item">photography</li>
+        <li class="interests__item">artificial intelligence</li>
+        <li class="interests__item">illustration</li>
+        <li class="interests__item">typography</li>
+        <li class="interests__item">social networks</li>
+        <li class="interests__item">research</li>
+        <li class="interests__item">dron pilot</li>
+        <li class="interests__item">games</li>
+      </ul>
+    </section>
+    <footer class="footer">
+      <h2 class="block-title footer__title">
+        Let´s chat! I´m ready to work on excinting projects
+      </h2>
+      <a class="footer__mail" href="mailto:srkarthik.designscape@gmail.com">srkarthik.designscape@gmail.com</a>
+    </footer>
+  </div>  
+  <div class="download-container">
+    <button class="download-btn" onclick="downloadPDF()">Скачать PDF</button>
+  </div>
+</body>
 </html>
