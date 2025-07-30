@@ -3,7 +3,7 @@ function downloadPDF() {
   
   const options = {
     margin: [10, 30, 0, 30],
-    filename: 'Karthik_SR_Portfolio.pdf',
+    filename: 'portfolio.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { 
       scale: 2,
