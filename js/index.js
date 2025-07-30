@@ -21,6 +21,7 @@ function downloadPDF() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  addUniqueIds();
   loadSavedData();
   addHoverEffects();
   
@@ -30,6 +31,37 @@ document.addEventListener('DOMContentLoaded', function() {
     element.addEventListener('click', makeEditable);
   });
 });
+
+function addUniqueIds() {
+  const editableSelectors = [
+    '.introduction__name',
+    '.introduction__position', 
+    '.introduction__greetings',
+    '.experience__position',
+    '.experience__tags',
+    '.experience__period',
+    '.experience__description li',
+    '.education__card-title',
+    '.education__card-date',
+    '.education__card-place',
+    '.education__card-hashtag',
+    '.interests__item',
+    '.footer__title',
+    '.footer__mail',
+    '.languages__name'
+  ];
+
+  let globalIndex = 0;
+  editableSelectors.forEach(selector => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(element => {
+      if (!element.id) {
+        element.id = `editable_${globalIndex}`;
+        globalIndex++;
+      }
+    });
+  });
+}
 
 function addHoverEffects() {
   const hoverElements = document.querySelectorAll('.introduction__name, .introduction__position, .introduction__greetings, .experience__position, .experience__tags, .experience__period, .experience__description li, .education__card-title, .education__card-date, .education__card-place, .education__card-hashtag, .interests__item, .footer__title, .footer__mail, .languages__name');
@@ -54,10 +86,10 @@ function loadSavedData() {
   if (savedData) {
     const data = JSON.parse(savedData);
     
-    Object.keys(data).forEach(selector => {
-      const element = document.querySelector(selector);
+    Object.keys(data).forEach(id => {
+      const element = document.getElementById(id);
       if (element) {
-        element.textContent = data[selector];
+        element.textContent = data[id];
       }
     });
   }
@@ -68,25 +100,12 @@ function saveData() {
   const editableElements = document.querySelectorAll('.introduction__name, .introduction__position, .introduction__greetings, .experience__position, .experience__tags, .experience__period, .experience__description li, .education__card-title, .education__card-date, .education__card-place, .education__card-hashtag, .interests__item, .footer__title, .footer__mail, .languages__name');
   
   editableElements.forEach(element => {
-    const selector = getElementSelector(element);
-    if (selector) {
-      data[selector] = element.textContent;
+    if (element.id) {
+      data[element.id] = element.textContent;
     }
   });
   
   localStorage.setItem('resumeData', JSON.stringify(data));
-}
-
-function getElementSelector(element) {
-  const classes = Array.from(element.classList);
-  if (classes.length > 0) {
-    const specificClass = classes.find(cls => cls.includes('__'));
-    if (specificClass) {
-      return '.' + specificClass;
-    }
-    return '.' + classes[0];
-  }
-  return null;
 }
 
 function makeEditable(event) {
@@ -102,12 +121,6 @@ function makeEditable(event) {
   element.style.borderRadius = '4px';
   element.style.backgroundColor = 'inherit';
   element.style.cursor = 'text';
-  
-  if (element.tagName === 'LI') {
-    element.style.setProperty('--before-content', 'none');
-    element.style.setProperty('--before-display', 'none');
-  }
-  
   element.contentEditable = 'true';
   element.focus();
   
@@ -121,12 +134,6 @@ function makeEditable(event) {
     element.style.backgroundColor = '';
     element.style.cursor = '';
     element.style.boxShadow = '';
-    
-    if (element.tagName === 'LI') {
-      element.style.removeProperty('--before-content');
-      element.style.removeProperty('--before-display');
-    }
-    
     element.contentEditable = 'false';
     
     saveData();
