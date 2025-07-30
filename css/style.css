@@ -233,16 +233,15 @@ img {
 }
 
 .experience__description li {
-  position: relative;
-  padding-left: 12px;
+  display: flex;
 }
 
 .experience__description li::before {
   content: "•";
-  position: absolute;
   left: 0;
   top: 0;
   display: block;
+  margin-right: 6px;
 }
 
 .tools {
@@ -272,6 +271,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  justify-content: space-between;
   padding: 16px 11px;
 }
 
@@ -434,9 +434,9 @@ img {
 .footer__title:hover,
 .footer__mail:hover,
 .languages__name:hover {
-  background-color: rgba(246, 237, 30, 0.2);
+  background-color: rgba(243, 233, 29, 0.4);
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 

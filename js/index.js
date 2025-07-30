@@ -2,7 +2,7 @@ function downloadPDF() {
   const element = document.getElementById('resume-content');
 
   const options = {
-    margin: [10, 30, 0, 30],
+    margin: [0, 30, 0, 30],
     filename: 'Karthik_SR_Portfolio.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: {
@@ -116,11 +116,11 @@ function makeEditable(event) {
     return;
   }
 
-  element.style.transition = 'all 0.2s ease';
+  element.style.transition = 'all 0.1s ease';
   element.style.border = '2px solid var(--yellow)';
-  element.style.padding = '4px';
+  element.style.padding = '2px';
   element.style.borderRadius = '4px';
-  element.style.backgroundColor = 'rgba(246, 237, 30, 0.1)';
+  element.style.backgroundColor = 'inherit';
   element.style.outline = 'none';
   element.style.cursor = 'text';
   element.contentEditable = 'true';
