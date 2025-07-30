@@ -1,23 +1,23 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 img {
- max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 ul{
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+  margin: 0;
 }
 
 body {
@@ -43,8 +43,8 @@ body {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 :root{
@@ -68,7 +68,7 @@ img {
     "expirience expirience expirience tools"
     "education education interests interests"
     "education education footer footer"
-  ;
+;
 }
 
 .section-container {
@@ -113,19 +113,19 @@ img {
 
 .introduction__greetings {
   font-size: 10px;
-  line-height: 150%; 
+  line-height: 150%;
 }
 .introduction__name {
   font-weight: 600;
   font-size: 14px;
-  line-height: 104%; 
+  line-height: 104%;
 
 }
 .introduction__position {
   color: var(--gray-text);
   font-weight: 500;
   font-size: 12px;
-  line-height: 150%; 
+  line-height: 150%;
 }
 
 .languages {
@@ -150,13 +150,10 @@ img {
   width: 100%;
 }
 
-.languages__title {
-}
-
 .languages__name {
   font-weight: 500;
   font-size: 10px;
-  line-height: 104%; 
+  line-height: 104%;
 
 }
 .languages__progress {
@@ -164,12 +161,6 @@ img {
   border-radius: 3px;
   width: 100%;
   background-color: var(--bg-green);
-}
-
-.languages__progress--en {
-}
-
-.languages__progress--ma {
 }
 
 .languages__progress--hi {
@@ -197,28 +188,28 @@ img {
   align-items:center;
   margin-bottom: 8px;
   font-weight: 500;
-  font-size: 8px; 
-  line-height: 150%;  
+  font-size: 8px;
+  line-height: 150%;
 }
 
 .experience__recent {
   background-color: #7E731266;
   color: #DDF163;
   padding: 2px 6px;
-  border-radius: 59px; 
+  border-radius: 59px;
 }
 
-.experience__position { 
-  font-weight: 500; 
-  font-size: 10px; 
-  line-height: 150%; 
+.experience__position {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 150%;
 }
 
 .experience__tags {
-  color: #3F3D3D; 
-  font-weight: 400; 
-  font-size: 8px; 
-  line-height: 150%; 
+  color: #3F3D3D;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 150%;
 }
 
 .experience__tags--green{
@@ -235,8 +226,8 @@ img {
   max-width: 239px;
   list-style: none;
   font-weight: 400;
-  font-size: 8px; 
-  line-height: 150%; 
+  font-size: 8px;
+  line-height: 150%;
   margin: 0;
   padding: 0;
 }
@@ -247,11 +238,11 @@ img {
 }
 
 .experience__description li::before {
-  content: var(--before-content, "•");
+  content: "•";
   position: absolute;
   left: 0;
   top: 0;
-  display: var(--before-display, block);
+  display: block;
 }
 
 .tools {
@@ -271,14 +262,14 @@ img {
 .tools__title {
   font-weight: 500;
   font-size: 14px;
-  line-height: 150%;  
+  line-height: 150%;
 }
 
 .tools__card {
   position: relative;
   background-color: var(--bg-white);
   border-radius: 6px;
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   gap: 16px;
   padding: 16px 11px;
@@ -291,24 +282,18 @@ img {
   color: var(--bg-white);
   font-weight: 500;
   font-size: 5px;
-  line-height: 142%; 
+  line-height: 142%;
   position: absolute;
   top: -5.5px;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
-  white-space: nowrap; 
+  white-space: nowrap;
 
-}
-
-.tools__card-icon {
-}
-
-.tools__icon {
 }
 
 .education {
   grid-area: education;
-  padding-right: 8px; 
+  padding-right: 8px;
 }
 
 .education__card-container{
@@ -316,9 +301,6 @@ img {
   flex-wrap: wrap;
   column-gap: 16px;
   row-gap: 12px;
-}
-
-.education__title {
 }
 
 .education__card {
@@ -333,14 +315,14 @@ img {
   display: flex;
   justify-content: space-between;
   font-weight: 500;
-  font-size: 10px; 
-  line-height: 150%; 
+  font-size: 10px;
+  line-height: 150%;
 }
 
 .education__card-title {
   font-weight: 500;
   font-size: 10px;
-  line-height: 150%; 
+  line-height: 150%;
 }
 
 .education__hashtag-container{
@@ -352,18 +334,18 @@ img {
 .education__card-hashtag {
   color: #149063;
   font-weight: 400;
-  font-size: 8px; 
-  line-height: 150%; 
+  font-size: 8px;
+  line-height: 150%;
 }
 
 .education__card-hashtag-like {
-  color: #EBF9F2;  
+  color: #EBF9F2;
 }
 
 .education__card-place {
   font-weight: 400;
   font-size: 8px;
-  line-height: 150%; 
+  line-height: 150%;
 }
 
 .education__card-like{
@@ -394,7 +376,7 @@ img {
   border-radius: 40px;
   font-weight: 400;
   font-size: 10px;
-  line-height: 150%;  
+  line-height: 150%;
 
 }
 
@@ -410,14 +392,14 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
-  margin-bottom: 11px; 
+  margin-bottom: 11px;
 }
 
 .footer__mail {
   color: #DDDDDD;
   font-weight: 400;
   font-size: 10px;
-  line-height: 150%;  
+  line-height: 150%;
 }
 
 .download-container {
@@ -464,7 +446,7 @@ img {
   }
 }
 
-@media (max-width:500px) { 
+@media (max-width:500px) {
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
@@ -474,6 +456,6 @@ img {
       "tools interests"
       "education education"
       "footer footer"
-    ;
+  ;
   }
 }
