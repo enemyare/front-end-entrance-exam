@@ -8,8 +8,9 @@
 
 ## Как можно запустить проект?:
 ### 1. Склонировать репозиторий
+````
 git clone git@github.com:enemyare/front-end-entrance-exam.git
-
+```
 ### 2. Перейти рабочую директорию
 ```
 cd front-end-entrance-exam
