@@ -258,6 +258,7 @@ img {
   padding: 0 12px;
 }
 
+
 .tools__title {
   font-weight: 500;
   font-size: 14px;
@@ -273,6 +274,11 @@ img {
   gap: 16px;
   justify-content: space-between;
   padding: 16px 11px;
+  transition: all 0.3s ease;
+}
+
+.tools__card:hover {
+  transform: scale(1.05);
 }
 
 .tools__card-title {
@@ -418,27 +424,15 @@ img {
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-.introduction__name:hover,
-.introduction__position:hover,
-.introduction__greetings:hover,
-.experience__position:hover,
-.experience__tags:hover,
-.experience__period:hover,
-.experience__description li:hover,
-.education__card-title:hover,
-.education__card-date:hover,
-.education__card-place:hover,
-.interests__item:hover,
-.footer__title:hover,
-.footer__mail:hover,
-.languages__name:hover {
-  background-color: rgba(243, 233, 29, 0.4);
-  border-radius: 4px;
+.download-btn:hover{
+  scale: 1.05;
   transition: all 0.4s ease;
-  cursor: pointer;
 }
+
+ 
 
 @media (max-width:570px) {
   .experience__description-container{
@@ -459,3 +453,4 @@ img {
   ;
   }
 }
+ 
