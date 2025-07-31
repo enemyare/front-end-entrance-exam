@@ -157,6 +157,7 @@ img {
   font-weight: 500;
   font-size: 10px;
   line-height: 104%;
+  white-space: nowrap;
 }
 .languages__progress {
   height: 11px;
