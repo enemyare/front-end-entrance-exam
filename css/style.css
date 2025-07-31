@@ -42,6 +42,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+* {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 img {
   max-width: 100%;
   height: auto;
