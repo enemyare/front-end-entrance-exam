@@ -5,7 +5,7 @@ function downloadPDF() {
     margin: [10, 40, 0, 40],
     filename: 'portfolio.pdf',
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
+    html2canvas: { scale: 2 },
   };
   html2pdf().set(options).from(element).save();
 }
